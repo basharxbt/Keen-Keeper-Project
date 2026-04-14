@@ -7,7 +7,7 @@ import { ImHome } from "react-icons/im";
 
 const Navbar = () => {
   const pathName = usePathname();
-  console.log(pathName);
+
   const navLinks = (
     <>
       <li

@@ -1,10 +1,16 @@
+import Friends from "@/components/Friends";
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <main></main>
+    <div className="bg-[#F8FAFC]">
+      <main>
+        <Hero></Hero>
+
+        <Friends></Friends>
+      </main>
     </div>
   );
 }
