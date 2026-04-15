@@ -4,9 +4,12 @@ import React from "react";
 
 const Friend = ({ friend }) => {
   return (
-    <Link href={`/friend/${friend.id}`}>
+    <Link
+      href={`/friend/${friend.id}`}
+      className="transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+    >
       <div>
-        <div className="space-y-3 flex flex-col items-center  justify-center text-center p-15 border border-white bg-white shadow rounded-md ">
+        <div className="space-y-3 flex flex-col items-center  justify-center text-center p-8 border border-white bg-white shadow rounded-2xl ">
           <Image
             height={100}
             width={100}
