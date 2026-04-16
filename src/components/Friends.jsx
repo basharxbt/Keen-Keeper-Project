@@ -20,6 +20,7 @@ const Friends = () => {
   return (
     <div className="container mx-auto">
       <h2 className="font-bold text-3xl">Your Friends</h2>
+
       <div className="grid grid-cols-4 gap-8 my-10 ">
         {friends.map((friend) => {
           return <Friend key={friend.id} friend={friend}></Friend>;

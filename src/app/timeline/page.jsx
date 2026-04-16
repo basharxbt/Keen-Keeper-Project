@@ -10,10 +10,10 @@ import { PiChatCircleText } from "react-icons/pi";
 const Timeline = () => {
   const { contact, setContact } = useContext(TimeLine);
 
-  const [selectedTypes, setSelectedTypes] = useState("all");
+  const [selectedTypes, setSelectedTypes] = useState("Filter");
 
   const filteredContact =
-    selectedTypes === "all"
+    selectedTypes === "Filter" || selectedTypes === "all"
       ? contact
       : contact.filter((c) => c.action === selectedTypes);
 
@@ -38,17 +38,24 @@ const Timeline = () => {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto h-screen">
       <div className="my-10">
-        <h1 className="text-3xl font-bold">Timeline</h1>
-        <fieldset className="fieldset my-5">
+        <h1 className="text-5xl text-center font-bold">Friendship Analytics</h1>
+
+        <fieldset className="fieldset my-5 flex gap-3 items-center justify-center">
+          <h5 className="text-2xl font-bold text-neutral/50 text-center">
+            Filter Contact:
+          </h5>
           <select
             value={selectedTypes}
             onChange={(e) => setSelectedTypes(e.target.value)}
             className="select"
           >
+            <option disabled value="Filter">
+              Filter
+            </option>
             <option value="all">All</option>
-            <option value="call">Call</option>
+            <option value="call"> Call</option>
             <option value="text">Text</option>
             <option value="video">Video Call</option>
           </select>
@@ -72,7 +79,9 @@ const Timeline = () => {
                   )}
                 </p>
                 <div>
-                  <p>{friend.name}</p>
+                  <p>
+                    {friend.action} with {friend.name}
+                  </p>
 
                   <p>{formatted}</p>
                 </div>

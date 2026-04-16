@@ -11,7 +11,7 @@ const Stats = () => {
     <div className="container mx-auto my-10">
       <h1 className="text-4xl font-bold">Friendship Analytics</h1>
       <div className="bg-white shadow-md rounded-sm p-5 my-10 ">
-        <h4 className="font-semibold text-2xl text-neutral/70">
+        <h4 className="font-semibold text-3xl mb-10 text-neutral/70 ">
           By Interaction Type
         </h4>
         <StatChart></StatChart>
