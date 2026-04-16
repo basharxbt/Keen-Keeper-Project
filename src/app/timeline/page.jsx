@@ -8,15 +8,13 @@ import { PiChatCircleText } from "react-icons/pi";
 
 const Timeline = () => {
   const { contact, setContact } = useContext(TimeLine);
-  const [types, setTypes] = useState([]);
 
-  const callInfo = contact.find((friend) => friend.action === "call");
-  if (callInfo) setContact([...contact, callInfo]);
+  const [selectedTypes, setSelectedTypes] = useState("all");
 
-  // useEffect(()=>{
-  //   if()
-
-  // },[])
+  const filteredContact =
+    selectedTypes === "all"
+      ? contact
+      : contact.filter((c) => c.action === selectedTypes);
 
   const now = new Date();
 
@@ -40,18 +38,21 @@ const Timeline = () => {
       <div className="my-10">
         <h1 className="text-3xl font-bold">Timeline</h1>
         <fieldset className="fieldset my-5">
-          <select defaultValue="Pick a browser" className="select">
-            <option onClick={() => filterContact("call")} disabled={true}>
-              Select Contact Type
-            </option>
-            <option>Call</option>
-            <option>Text</option>
-            <option>Video Call</option>
+          <select
+            value={selectedTypes}
+            onChange={(e) => setSelectedTypes(e.target.value)}
+            className="select"
+          >
+            <option disabled={true}>Select Contact Type</option>
+            <option value="all">All</option>
+            <option value="call">Call</option>
+            <option value="text">Text</option>
+            <option value="video">Video Call</option>
           </select>
         </fieldset>
 
         <div className="flex flex-col-reverse gap-5 mt-10">
-          {contact.map((friend, index) => {
+          {filteredContact.map((friend, index) => {
             return (
               <div
                 key={index}
