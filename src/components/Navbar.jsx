@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm px-15">
       <div className="flex-1">
-        <Link href="/" className="btn btn-ghost text-2xl">
+        <Link href="/" className="btn btn-ghost text-3xl">
           KeenKeeper
         </Link>
       </div>

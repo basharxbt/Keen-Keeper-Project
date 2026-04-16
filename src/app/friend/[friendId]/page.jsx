@@ -9,7 +9,7 @@ const FriendInfo = async ({ params }) => {
   const friend = friends.find((friend) => friend.id === Number(friendId));
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto h-screen">
       <FriendInfoDetails friend={friend}></FriendInfoDetails>
     </div>
   );

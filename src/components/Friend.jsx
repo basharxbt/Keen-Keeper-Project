@@ -9,7 +9,7 @@ const Friend = ({ friend }) => {
       className="transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
     >
       <div>
-        <div className="space-y-3 flex flex-col items-center  justify-center text-center p-8 border border-white bg-white shadow rounded-2xl ">
+        <div className="space-y-1 flex flex-col items-center  justify-center text-center p-8 border border-white bg-white shadow rounded-2xl ">
           <Image
             height={100}
             width={100}
@@ -17,13 +17,15 @@ const Friend = ({ friend }) => {
             alt={friend.name}
             className="rounded-full"
           ></Image>
-          <h3>{friend.name}</h3>
-          <p>{friend.days_since_contact} Days Ago</p>
-          <div className="space-x-4 my-5">
+          <h3 className="font-semibold text-2xl">{friend.name}</h3>
+          <p className="font-semibold text-neutral/70">
+            {friend.days_since_contact} Days Ago
+          </p>
+          <div className="space-x-4 my-3">
             {friend.tags.map((tag, index) => {
               return (
                 <span
-                  className="bg-purple-200 font-semibold text-black   p-3 rounded-3xl "
+                  className="bg-gray-400 font-semibold text-black p-2 rounded-sm "
                   key={index}
                 >
                   {tag}
@@ -33,12 +35,12 @@ const Friend = ({ friend }) => {
           </div>
 
           <p
-            className={`rounded-3xl p-3 w-max ${
-              friend.status === "almost due"
-                ? "bg-yellow-500 text-yellow-950"
-                : friend.status === "on-track"
-                  ? "bg-green-500 text-black"
-                  : "bg-red-700 text-white"
+            className={`rounded-2xl p-2 w-max font-semibold ${
+              friend.status === "ALMOST DUE"
+                ? "bg-yellow-500 text-yellow-950/90"
+                : friend.status === "ON-TRACK"
+                  ? "bg-green-500 text-black/90"
+                  : "bg-red-700 text-white/90"
             }`}
           >
             {friend.status}

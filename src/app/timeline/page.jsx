@@ -1,6 +1,7 @@
 "use client";
 
 import { TimeLine } from "@/contextApi/TimelineContext";
+import TimelineNotFound from "@/ui/TimelineNotFound";
 import { useContext, useEffect, useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { FiVideo } from "react-icons/fi";
@@ -32,7 +33,10 @@ const Timeline = () => {
 
   const formatted = `${date} at ${time}`;
 
-  console.log(formatted);
+  if (contact.length === 0) {
+    return <TimelineNotFound></TimelineNotFound>;
+  }
+
   return (
     <div className="container mx-auto">
       <div className="my-10">
@@ -43,7 +47,6 @@ const Timeline = () => {
             onChange={(e) => setSelectedTypes(e.target.value)}
             className="select"
           >
-            <option disabled={true}>Select Contact Type</option>
             <option value="all">All</option>
             <option value="call">Call</option>
             <option value="text">Text</option>

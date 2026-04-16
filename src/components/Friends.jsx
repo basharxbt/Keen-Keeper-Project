@@ -5,14 +5,18 @@ import React, { Suspense } from "react";
 import Friend from "./Friend";
 import UseFriendsData from "@/fetchook/UseFriendsData";
 import useFriendsData from "@/fetchook/UseFriendsData";
+import { HashLoader } from "react-spinners";
 
 const Friends = () => {
-  // const res = await fetch("http://localhost:3000/data.json");
-  // const friends = await res.json();
+  const { friends, loading } = useFriendsData();
 
-  const { friends, setFriends } = useFriendsData();
-  console.log(friends);
-
+  if (loading) {
+    return (
+      <div className="text-5xl flex items-center my-10 justify-center text-green-950 h-screen">
+        <HashLoader />
+      </div>
+    );
+  }
   return (
     <div className="container mx-auto">
       <h2 className="font-bold text-3xl">Your Friends</h2>
