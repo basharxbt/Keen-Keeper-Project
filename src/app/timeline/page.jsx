@@ -42,14 +42,14 @@ const Timeline = () => {
       <div className="my-10">
         <h1 className="text-5xl text-center font-bold">Friendship Analytics</h1>
 
-        <fieldset className="fieldset my-5 flex gap-3 items-center justify-center">
-          <h5 className="text-2xl font-bold text-neutral/50 text-center">
+        <fieldset className="fieldset my-5 flex-col justify-center items-center gap-3 p-5">
+          <h5 className="text-2xl font-bold text-neutral/50 ">
             Filter Contact:
           </h5>
           <select
             value={selectedTypes}
             onChange={(e) => setSelectedTypes(e.target.value)}
-            className="select"
+            className="select  "
           >
             <option disabled value="Filter">
               Filter
@@ -61,12 +61,12 @@ const Timeline = () => {
           </select>
         </fieldset>
 
-        <div className="flex flex-col-reverse gap-5 mt-10">
+        <div className="flex p-5 md:p-0 flex-col-reverse gap-5 mt-10">
           {filteredContact.map((friend, index) => {
             return (
               <div
                 key={index}
-                className="flex items-center gap-5 p-5 shadow-md bg-white rounded-sm border-3 border-red-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="flex items-center gap-5 p-5 shadow-md bg-white rounded-sm border-3 border-red-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl "
               >
                 <p className="text-4xl">
                   {" "}
