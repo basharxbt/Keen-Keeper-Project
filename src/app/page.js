@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[#F8FAFC] ">
+    <div className="bg-[#F8FAFC] min-h-screen">
       <main>
         <Hero></Hero>
 

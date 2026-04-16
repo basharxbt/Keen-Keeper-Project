@@ -31,13 +31,13 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm px-15">
+    <div className="navbar bg-base-100 shadow-sm px-15 flex gap-2 flex-col md:flex-row ">
       <div className="flex-1">
         <Link href="/" className="btn btn-ghost text-3xl">
           KeenKeeper
         </Link>
       </div>
-      <div className="flex-none">
+      <div className="">
         <ul className="menu menu-horizontal px-1 gap-4">{navLinks}</ul>
       </div>
     </div>

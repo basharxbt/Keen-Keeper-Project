@@ -13,7 +13,7 @@ import { TbEdit } from "react-icons/tb";
 import { TimeLine } from "@/contextApi/TimelineContext";
 import { Slide, toast } from "react-toastify";
 
-const FriendInfoDetails = ({ friend, action }) => {
+const FriendInfoDetails = ({ friend }) => {
   const { contact, setContact } = useContext(TimeLine);
   const timeLineHandler = (friend, action) => {
     setContact([...contact, { ...friend, action }]);
@@ -31,7 +31,7 @@ const FriendInfoDetails = ({ friend, action }) => {
   };
 
   return (
-    <div className="flex my-20 justify-between gap-10 ">
+    <div className="flex flex-col lg:flex-row my-20 justify-between gap-10 ">
       <div>
         <div className="space-y-3 flex flex-col items-center  justify-center text-center p-5 border border-white bg-white shadow-md rounded-md ">
           <Image
@@ -81,7 +81,7 @@ const FriendInfoDetails = ({ friend, action }) => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 w-full gap-8">
+      <div className="grid lg:grid-cols-3 w-full gap-8">
         <div className="flex flex-col justify-center items-center text-center p-5 rounded-md shadow-md ">
           <p className="text-3xl font-semibold">{friend.days_since_contact}</p>
           <p>Days Since Contact</p>
@@ -94,7 +94,7 @@ const FriendInfoDetails = ({ friend, action }) => {
           <p className="text-3xl font-semibold">{friend.next_due_date}</p>
           <p>Next Due</p>
         </div>
-        <div className=" flex justify-between items-center  p-5 rounded-md shadow-md col-span-3 w-full">
+        <div className=" flex justify-between items-center  p-5 rounded-md shadow-md lg:col-span-3 w-full ">
           <div className="space-y-2">
             <p className="text-3xl">Relationship Goal </p>
             <p className="text-2xl text-neutral/70">
@@ -106,10 +106,10 @@ const FriendInfoDetails = ({ friend, action }) => {
             <TbEdit /> Edit
           </button>
         </div>
-        <div className="flex flex-col justify-center p-5 rounded-md shadow-md col-span-3">
+        <div className="flex flex-col justify-center p-5 rounded-md shadow-md lg:col-span-3">
           <p className="text-3xl font-semibold">Quick Check-IN</p>
 
-          <div className="grid grid-cols-3 gap-5 mt-5">
+          <div className="grid lg:grid-cols-3 gap-5 my-5">
             <button
               onClick={() => timeLineHandler(friend, "call")}
               className="btn text-2xl h-full flex flex-col p-5 "

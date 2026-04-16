@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagramSquare, FaTwitterSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="bg-green-950/90">
-      <div className="container mx-auto text-white">
+      <div className="container mx-auto text-white p-5 lg:p-0">
         <div className="text-center my-10 space-y-5">
           <h2 className="text-5xl">KeenKeeper</h2>
           <p className="text-white/80">
@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
           </div>
           <hr className="text-gray-600" />
-          <div className="flex justify-between text-white/60">
+          <div className="flex flex-col items-center gap-3 md:justify-between md:flex-row  text-white/60">
             <p className="text-white/60">
               © 2026 KeenKeeper. All rights reserved.
             </p>

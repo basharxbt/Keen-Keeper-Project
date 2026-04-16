@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-slate-100 to-slate-200 text-slate-800 px-4">
+    <div className="min-h-screen flex  justify-center bg-gradient-to-br from-white via-slate-100 to-slate-200 text-slate-800 px-4">
       <div className="text-center max-w-xl">
         {/* 404 */}
         <h1 className="text-8xl font-extrabold tracking-widest text-slate-900">

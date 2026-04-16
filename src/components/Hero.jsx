@@ -3,8 +3,8 @@ import { FaPlus } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto">
-      <div className="text-center my-20 space-y-5">
+    <div className="container mx-auto p-5 md:p-0">
+      <div className="text-center my-20 space-y-5 ">
         <h2 className="text-5xl font-bold text-green-950 font-bold">
           Friends to keep close in your life
         </h2>
@@ -20,7 +20,7 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 my-20">
+      <div className="grid  md:grid-cols-4 gap-5 my-20">
         <div className="p-10 text-center border border-white bg-white shadow rounded-md ">
           <p className="text-3xl text-green-950 font-semibold ">10</p>
           <span className="text-green-900/70">Total Friends</span>
