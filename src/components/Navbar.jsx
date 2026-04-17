@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { ImHome } from "react-icons/im";
+import { IoMdTime } from "react-icons/io";
+import { TfiStatsUp } from "react-icons/tfi";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -21,12 +23,18 @@ const Navbar = () => {
       <li
         className={`rounded-sm ${pathName === "/timeline" ? "bg-green-900 text-white" : ""}`}
       >
-        <Link href="/timeline">Timeline</Link>
+        <Link href="/timeline">
+          <IoMdTime />
+          Timeline
+        </Link>
       </li>
       <li
         className={`rounded-sm ${pathName === "/stats" ? "bg-green-900 text-white" : ""}`}
       >
-        <Link href="/stats">Stats</Link>
+        <Link href="/stats">
+          <TfiStatsUp />
+          Stats
+        </Link>
       </li>
     </>
   );

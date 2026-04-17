@@ -41,7 +41,7 @@ const FriendInfoDetails = ({ friend }) => {
             alt={friend.name}
             className="rounded-full"
           ></Image>
-          <h3>{friend.name}</h3>
+          <h3 className="text-2xl font-bold">{friend.name}</h3>
           <p
             className={`rounded-3xl p-3 w-max ${
               friend.status === "almost due"
