@@ -21,7 +21,7 @@ const Friends = () => {
     <div className="container mx-auto p-5 lg:p-0">
       <h2 className="font-bold text-3xl">Your Friends</h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 my-10 items-stretch">
         {friends.map((friend) => {
           return <Friend key={friend.id} friend={friend}></Friend>;
         })}

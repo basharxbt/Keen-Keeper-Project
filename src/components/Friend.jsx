@@ -9,7 +9,7 @@ const Friend = ({ friend }) => {
       className="transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
     >
       <div>
-        <div className="space-y-1 flex flex-col items-center  justify-center text-center p-8 border border-white bg-white shadow rounded-2xl ">
+        <div className="space-y-1 flex flex-col items-center  justify-center text-center p-8 border border-white bg-white shadow rounded-2xl h-full">
           <Image
             height={100}
             width={100}
@@ -25,7 +25,7 @@ const Friend = ({ friend }) => {
             {friend.tags.map((tag, index) => {
               return (
                 <span
-                  className="bg-gray-400 font-semibold text-black p-2 rounded-sm "
+                  className="bg-gray-400  font-semibold text-black p-2 rounded-sm "
                   key={index}
                 >
                   {tag}

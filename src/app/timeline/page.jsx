@@ -42,7 +42,7 @@ const Timeline = () => {
       <div className="my-10">
         <h1 className="text-5xl text-center font-bold">Friendship Analytics</h1>
 
-        <fieldset className="fieldset my-5 flex-col justify-center items-center gap-3 p-5">
+        <fieldset className="fieldset my-5 flex-col justify-center items-center gap-3 p-5 md:p-0">
           <h5 className="text-2xl font-bold text-neutral/50 ">
             Filter Contact:
           </h5>
